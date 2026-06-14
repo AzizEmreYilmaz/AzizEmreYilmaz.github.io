@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AzizEmre Yılmaz | Full-Stack Developer</title>
+    <meta name="description"
+        content="AzizEmre Yılmaz - Atatürk Üniversitesi Bilişim Sistemleri öğrencisi ve Full-Stack Geliştirici portfolyosu.">
+    <meta name="keywords" content="frontend, backend, full stack, web developer, ui ux designer, react, .net, c#">
+    <meta name="author" content="AzizEmre Yılmaz">
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body class="dark-mode">
+
+    <div id="scroll-progress"></div>
+
+    <div id="preloader">
+        <div class="loader-wrapper">
+            <div class="loader-text-bg">AzizEmre</div>
+            <div class="loader-text-main">AzizEmre</div>
+        </div>
+    </div>
+
+    <div id="cursor-dot"></div>
+    <div id="cursor-follower"></div>
+
+    <nav class="navbar">
+        <div class="logo">Aziz<span>Emre</span></div>
+        <div class="hamburger" id="hamburger-menu"><i class="fas fa-bars"></i></div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#hero" class="nav-item" data-tr="Ana Sayfa" data-en="Home">Ana Sayfa</a></li>
+            <li><a href="#about" class="nav-item" data-tr="Hakkımda" data-en="About">Hakkımda</a></li>
+            <li><a href="#skills" class="nav-item" data-tr="Yetenekler" data-en="Skills">Yetenekler</a></li>
+            <li><a href="#projects" class="nav-item" data-tr="Projeler" data-en="Projects">Projeler</a></li>
+            <li><a href="#academic" class="nav-item" data-tr="Akademik" data-en="Academic">Akademik</a></li>
+            <li><a href="#contact" class="nav-item" data-tr="İletişim" data-en="Contact">İletişim</a></li>
+            <li><a href="workshop.html" class="nav-workshop" data-tr="Web Atölyesi" data-en="Web Workshop">Web
+                    Atölyesi</a></li>
+
+            <!-- Dil Seçeneği ve Tema Butonu Yanyana -->
+            <li style="display: flex; gap: 10px; align-items: center;">
+                <button id="lang-toggle" class="theme-btn" style="font-weight: 800;">EN</button>
+                <button id="theme-toggle" class="theme-btn" aria-label="Tema Değiştir"><i
+                        class="fas fa-moon"></i></button>
+            </li>
+        </ul>
+    </nav>
+
+    <section class="hero" id="hero">
+        <div class="hero-bg-blob blob-1"></div>
+        <div class="hero-bg-blob blob-2"></div>
+        <div class="hero-content">
+            <h1 class="apple-style"><span data-tr="Merhaba, Ben" data-en="Hello, I'm">Merhaba, Ben</span> <span
+                    id="typewriter"></span></h1>
+            <p class="role-text">Full-Stack Developer & UI/UX Designer</p>
+            <p class="description"
+                data-tr="Modern, hızlı ve ölçeklenebilir dijital ürünler tasarlıyor ve geliştiriyorum. Karmaşık problemleri estetik ve temiz kodlarla çözmeyi seviyorum."
+                data-en="I design and develop modern, fast, and scalable digital products. I love solving complex problems with aesthetic and clean codes.">
+                Modern, hızlı ve ölçeklenebilir dijital ürünler tasarlıyor ve geliştiriyorum. Karmaşık problemleri
+                estetik ve temiz kodlarla çözmeyi seviyorum.</p>
+            <div class="hero-btns">
+                <a href="#projects" class="btn" data-tr="Çalışmalarımı Gör" data-en="View My Work">Çalışmalarımı Gör</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section reveal" id="about">
+        <h2 class="section-title" data-tr="Hakkımda" data-en="About Me">Hakkımda</h2>
+        <div class="about-content">
+            <p class="description" style="margin: 0 auto; text-align: center; max-width: 850px;"
+                data-tr="Atatürk Üniversitesi Bilişim Sistemleri ve Teknolojileri bölümünde eğitimine devam eden tutkulu bir Full-Stack Geliştiriciyim. Kodlama serüvenimde modern web teknolojilerinden nesne yönelimli programlamaya (C#) ve çapraz platform mobil geliştirmeye (Flutter) kadar geniş bir yelpazede uzmanlaşıyorum. Arka planda çalışan karmaşık veri sistemlerini inşa ederken, ön yüzde kullanıcı deneyimini merkeze alan estetik ve temiz arayüzler tasarlamayı ilke edindim."
+                data-en="I am a passionate Full-Stack Developer continuing my education at Atatürk University, Department of Information Systems and Technologies. In my coding journey, I specialize in a wide range of areas from modern web technologies to object-oriented programming (C#) and cross-platform mobile development (Flutter).">
+                Atatürk Üniversitesi Bilişim Sistemleri ve Teknolojileri bölümünde eğitimine devam eden tutkulu bir
+                <strong>Full-Stack Geliştiriciyim</strong>. Kodlama serüvenimde modern web teknolojilerinden nesne
+                yönelimli programlamaya (C#) ve çapraz platform mobil geliştirmeye (Flutter) kadar geniş bir yelpazede
+                uzmanlaşıyorum. Arka planda çalışan karmaşık veri sistemlerini inşa ederken, ön yüzde kullanıcı
+                deneyimini merkeze alan estetik ve temiz arayüzler tasarlamayı ilke edindim.
+            </p>
+        </div>
+    </section>
+
+    <section class="section reveal" id="skills">
+        <h2 class="section-title" data-tr="Yeteneklerim" data-en="My Skills">Yeteneklerim</h2>
+        <p style="text-align: center; color: var(--text-dim); margin-top: -30px; margin-bottom: 40px; font-size: 0.9rem;"
+            data-tr="Detayları görmek için kartların üzerine tıklayın." data-en="Click on the cards to see details.">
+            Detayları görmek için kartların üzerine tıklayın.</p>
+
+        <div class="skills-container">
+            <!-- tilt-card classı eklendi -->
+            <div class="skill-card interactive-skill tilt-card">
+                <i class="fas fa-code"></i>
+                <h3>C# & Backend</h3>
+                <div class="skill-progress-container">
+                    <div class="skill-progress" data-width="85%"></div>
+                </div>
+                <div class="skill-details">
+                    <p data-tr="Nesne Yönelimli Programlama (OOP) prensipleriyle çalışıyorum. Otopark varlık kontrol algoritmaları ve veri yönetimi sistemleri geliştiriyorum."
+                        data-en="I work with Object Oriented Programming (OOP) principles. I develop parking asset control algorithms and data management systems.">
+                        Nesne Yönelimli Programlama (OOP) prensipleriyle çalışıyorum. Otopark varlık kontrol
+                        algoritmaları ve veri yönetimi sistemleri geliştiriyorum.</p>
+                </div>
+                <i class="fas fa-chevron-down expand-icon"></i>
+            </div>
+
+            <div class="skill-card interactive-skill tilt-card">
+                <i class="fab fa-android"></i>
+                <h3>Flutter & Mobil</h3>
+                <div class="skill-progress-container">
+                    <div class="skill-progress" data-width="80%"></div>
+                </div>
+                <div class="skill-details">
+                    <p data-tr="Dart dilini kullanarak çapraz platform mobil arayüzler tasarlıyorum. Provider yapısı ile durum yönetimi (state management) sağlıyorum."
+                        data-en="I design cross-platform mobile interfaces using Dart. I provide state management with Provider architecture.">
+                        Dart dilini kullanarak çapraz platform mobil arayüzler tasarlıyorum. Provider yapısı ile durum
+                        yönetimi (state management) sağlıyorum.</p>
+                </div>
+                <i class="fas fa-chevron-down expand-icon"></i>
+            </div>
+
+            <div class="skill-card interactive-skill tilt-card">
+                <i class="fab fa-js"></i>
+                <h3>Web Geliştirme</h3>
+                <div class="skill-progress-container">
+                    <div class="skill-progress" data-width="95%"></div>
+                </div>
+                <div class="skill-details">
+                    <p data-tr="SEO optimizasyonları, lazy loading performans geliştirmeleri ve tam duyarlı (responsive) web siteleri hazırlıyorum."
+                        data-en="I prepare SEO optimizations, lazy loading performance improvements and fully responsive websites.">
+                        SEO optimizasyonları, lazy loading performans geliştirmeleri ve tam duyarlı (responsive) web
+                        siteleri hazırlıyorum.</p>
+                </div>
+                <i class="fas fa-chevron-down expand-icon"></i>
+            </div>
+
+            <div class="skill-card interactive-skill tilt-card">
+                <i class="fas fa-microchip"></i>
+                <h3 data-tr="Tasarım & Donanım" data-en="Design & Hardware">Tasarım & Donanım</h3>
+                <div class="skill-progress-container">
+                    <div class="skill-progress" data-width="75%"></div>
+                </div>
+                <div class="skill-details">
+                    <p data-tr="UI/UX tasarımları oluşturmanın yanı sıra; TinkerCAD kullanarak sensör tabanlı elektronik otomasyon simülasyonları tasarlıyorum."
+                        data-en="In addition to creating UI/UX designs; I design sensor-based electronic automation simulations using TinkerCAD.">
+                        UI/UX tasarımları oluşturmanın yanı sıra; TinkerCAD kullanarak sensör tabanlı elektronik
+                        otomasyon simülasyonları tasarlıyorum.</p>
+                </div>
+                <i class="fas fa-chevron-down expand-icon"></i>
+            </div>
+        </div>
+    </section>
+
+    <section class="section reveal" id="projects">
+        <h2 class="section-title" data-tr="Öne Çıkan Projeler" data-en="Featured Projects">Öne Çıkan Projeler</h2>
+        <div class="project-filters">
+            <button class="filter-btn active" data-filter="all" data-tr="Tümü" data-en="All">Tümü</button>
+            <button class="filter-btn" data-filter="web">Web Design</button>
+            <button class="filter-btn" data-filter="ui">UI / UX</button>
+        </div>
+
+        <div class="project-grid">
+            <div class="project-card tilt-card" data-category="ui" data-img="img/Ekran görüntüsü 2026-02-20 001106.png"
+                data-title="Giriş Ekranı" data-desc="Modern Glassmorphism arayüzü ile tasarlanmış güvenli giriş ekranı."
+                data-github="#" data-demo="#">
+                <div class="project-img-container login-bg">
+                    <img src="img/Ekran görüntüsü 2026-02-20 001106.png" alt="Giriş Ekranı" loading="lazy"
+                        class="lazy-img">
+                    <div class="project-overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="project-info"><span class="tech-tag">UI / UX</span>
+                    <h3 data-tr="Giriş Ekranı" data-en="Login Screen">Giriş Ekranı</h3>
+                </div>
+            </div>
+
+            <div class="project-card tilt-card" data-category="web" data-img="img/Ekran görüntüsü 2026-02-20 001038.png"
+                data-title="Fiyat Tablosu"
+                data-desc="Kurumsal fiyatlandırma sayfası için optimize edilmiş modern tablo tasarımı." data-github="#"
+                data-demo="#">
+                <div class="project-img-container price-bg">
+                    <img src="img/Ekran görüntüsü 2026-02-20 001038.png" alt="Fiyat Tablosu" loading="lazy"
+                        class="lazy-img">
+                    <div class="project-overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="project-info"><span class="tech-tag">Web Design</span>
+                    <h3 data-tr="Fiyat Tablosu" data-en="Pricing Table">Fiyat Tablosu</h3>
+                </div>
+            </div>
+
+            <div class="project-card tilt-card" data-category="web" data-img="img/Ekran görüntüsü 2026-02-20 001054.jpg"
+                data-title="Abonelik Formu" data-desc="Modern e-posta abonelik arayüzü ve responsive form tasarımı."
+                data-github="#" data-demo="#">
+                <div class="project-img-container mail-bg">
+                    <img src="img/Ekran görüntüsü 2026-02-20 001054.jpg" alt="Abonelik Formu" loading="lazy"
+                        class="lazy-img">
+                    <div class="project-overlay"><i class="fas fa-search-plus"></i></div>
+                </div>
+                <div class="project-info"><span class="tech-tag">Responsive</span>
+                    <h3 data-tr="Abonelik Formu" data-en="Subscription Form">Abonelik Formu</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Akademik Bölümü Orijinal Haliyle Korundu -->
+    <section class="section reveal" id="academic">
+        <h2 class="section-title" data-tr="Akademik & Teknik Çalışmalarım" data-en="Academic & Technical Work">Akademik
+            & Teknik Çalışmalarım</h2>
+        <p style="text-align: center; color: var(--text-dim); margin-top: -30px; margin-bottom: 50px; font-size: 0.9rem;"
+            data-tr="Algoritma tasarımı, veritabanı modelleme, ağ mimarisi ve sistem yönetimi üzerine gerçekleştirdiğim temel çalışmalar."
+            data-en="My fundamental studies on algorithm design, database modeling, network architecture, and system administration.">
+            Algoritma tasarımı, veritabanı modelleme, ağ mimarisi ve sistem yönetimi üzerine gerçekleştirdiğim temel
+            çalışmalar.</p>
+
+        <div
+            style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto;">
+            <!-- Kart 1 -->
+            <div class="tilt-card"
+                style="background: rgba(30, 30, 35, 0.7); padding: 30px; border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.08); transition: transform 0.3s ease, box-shadow 0.3s ease;"
+                onmouseover="this.style.borderColor='rgba(187,134,252,0.3)';"
+                onmouseout="this.style.borderColor='rgba(255, 255, 255, 0.08)';">
+                <i class="fas fa-network-wired"
+                    style="font-size: 2.5rem; color: #4ade80; margin-bottom: 20px; display: block;"></i>
+                <h3 style="margin-bottom: 15px; font-size: 1.3rem; color: var(--text-main);"
+                    data-tr="Ağ Mimarisi & Sistemleri" data-en="Network Architecture">Ağ Mimarisi & Sistemleri</h3>
+                <p style="color: var(--text-dim); font-size: 0.9rem; line-height: 1.6; margin-bottom: 25px;"
+                    data-tr="İleri seviye IP Subnetting, Alt Ağ Maskesi hesaplamaları ve Linux/DOS komut satırı (CLI) uygulamaları."
+                    data-en="Advanced IP Subnetting, Subnet Mask calculations, and Linux/DOS command line (CLI) applications.">
+                    İleri seviye IP Subnetting, Alt Ağ Maskesi hesaplamaları ve Linux/DOS komut satırı (CLI)
+                    uygulamaları.</p>
+                <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                    <span
+                        style="background: rgba(74, 222, 128, 0.1); color: #4ade80; padding: 5px 12px; border-radius: 8px; font-size: 0.75rem; font-weight: 600;">IP
+                        Subnetting</span>
+                    <span
+                        style="background: rgba(74, 222, 128, 0.1); color: #4ade80; padding: 5px 12px; border-radius: 8px; font-size: 0.75rem; font-weight: 600;">Linux/DOS
+                        CLI</span>
+                </div>
+            </div>
+
+            <!-- Kart 2 -->
+            <div class="tilt-card"
+                style="background: rgba(30, 30, 35, 0.7); padding: 30px; border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.08); transition: transform 0.3s ease, box-shadow 0.3s ease;"
+                onmouseover="this.style.borderColor='rgba(187,134,252,0.3)';"
+                onmouseout="this.style.borderColor='rgba(255, 255, 255, 0.08)';">
+                <i class="fas fa-database"
+                    style="font-size: 2.5rem; color: #f29111; margin-bottom: 20px; display: block;"></i>
+                <h3 style="margin-bottom: 15px; font-size: 1.3rem; color: var(--text-main);" data-tr="Veritabanı (VTYS)"
+                    data-en="Databases (DBMS)">Veritabanı (VTYS)</h3>
+                <p style="color: var(--text-dim); font-size: 0.9rem; line-height: 1.6; margin-bottom: 25px;"
+                    data-tr="MS Access üzerinde tasarlanmış tam teşekküllü veritabanı. Varlık-İlişki (ER) diyagramları ve SQL raporlama sorguları."
+                    data-en="Fully fledged database designed on MS Access. Entity-Relationship (ER) diagrams and SQL reporting queries.">
+                    MS Access üzerinde tasarlanmış tam teşekküllü veritabanı. Varlık-İlişki (ER) diyagramları ve SQL
+                    raporlama sorguları.</p>
+                <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                    <span
+                        style="background: rgba(242, 145, 17, 0.1); color: #f29111; padding: 5px 12px; border-radius: 8px; font-size: 0.75rem; font-weight: 600;">MS
+                        Access</span>
+                    <span
+                        style="background: rgba(242, 145, 17, 0.1); color: #f29111; padding: 5px 12px; border-radius: 8px; font-size: 0.75rem; font-weight: 600;">ER
+                        Modelleme</span>
+                </div>
+            </div>
+
+            <!-- Kart 3 -->
+            <div class="tilt-card"
+                style="background: rgba(30, 30, 35, 0.7); padding: 30px; border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.08); transition: transform 0.3s ease, box-shadow 0.3s ease;"
+                onmouseover="this.style.borderColor='rgba(187,134,252,0.3)';"
+                onmouseout="this.style.borderColor='rgba(255, 255, 255, 0.08)';">
+                <i class="fab fa-python"
+                    style="font-size: 2.5rem; color: #3776ab; margin-bottom: 20px; display: block;"></i>
+                <h3 style="margin-bottom: 15px; font-size: 1.3rem; color: var(--text-main);"
+                    data-tr="Python ile Veri & Betik" data-en="Python Scripts & Data">Python ile Veri & Betik</h3>
+                <p style="color: var(--text-dim); font-size: 0.9rem; line-height: 1.6; margin-bottom: 25px;"
+                    data-tr="Güçlü parola oluşturucular, döngü yapısıyla matematiksel modellemeler ve veri yapılarıyla istatistiksel işlemler."
+                    data-en="Strong password generators, mathematical modeling with loops, and statistical operations with data structures.">
+                    Güçlü parola oluşturucular, döngü yapısıyla matematiksel modellemeler ve veri yapılarıyla
+                    istatistiksel işlemler.</p>
+                <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                    <span
+                        style="background: rgba(55, 118, 171, 0.1); color: #3776ab; padding: 5px 12px; border-radius: 8px; font-size: 0.75rem; font-weight: 600;">Python
+                        Scripting</span>
+                    <span
+                        style="background: rgba(55, 118, 171, 0.1); color: #3776ab; padding: 5px 12px; border-radius: 8px; font-size: 0.75rem; font-weight: 600;">Veri
+                        Yapıları</span>
+                </div>
+            </div>
+
+            <!-- Kart 4 -->
+            <div class="tilt-card"
+                style="background: rgba(30, 30, 35, 0.7); padding: 30px; border-radius: 20px; border: 1px solid rgba(255, 255, 255, 0.08); transition: transform 0.3s ease, box-shadow 0.3s ease;"
+                onmouseover="this.style.borderColor='rgba(187,134,252,0.3)';"
+                onmouseout="this.style.borderColor='rgba(255, 255, 255, 0.08)';">
+                <i class="fab fa-windows"
+                    style="font-size: 2.5rem; color: #9b4993; margin-bottom: 20px; display: block;"></i>
+                <h3 style="margin-bottom: 15px; font-size: 1.3rem; color: var(--text-main);" data-tr="C# & Otomasyon"
+                    data-en="C# & Automation">C# & Otomasyon</h3>
+                <p style="color: var(--text-dim); font-size: 0.9rem; line-height: 1.6; margin-bottom: 25px;"
+                    data-tr="Optimize Switch-Case ve döngü yapılarıyla çalışan C# tabanlı otopark ücretlendirme sistemi ve programlama mantığı."
+                    data-en="C# based parking pricing system and programming logic working with optimized Switch-Case and loop structures.">
+                    Optimize Switch-Case ve döngü yapılarıyla çalışan C# tabanlı otopark ücretlendirme sistemi ve
+                    programlama mantığı.</p>
+                <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+                    <span
+                        style="background: rgba(155, 73, 147, 0.1); color: #9b4993; padding: 5px 12px; border-radius: 8px; font-size: 0.75rem; font-weight: 600;">C#
+                        .NET Core</span>
+                    <span
+                        style="background: rgba(155, 73, 147, 0.1); color: #9b4993; padding: 5px 12px; border-radius: 8px; font-size: 0.75rem; font-weight: 600;">Algoritma</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Formspree ve Modal Korundu -->
+    <footer id="contact" class="section reveal">
+        <h2 class="section-title" data-tr="İletişime Geç" data-en="Get in Touch">İletişime Geç</h2>
+        <div class="contact-container" style="max-width: 600px; margin: 0 auto;">
+            <form id="contact-form" action="https://formspree.io/f/YOUR_ID" method="POST" class="modern-form">
+                <input type="text" name="name" placeholder="Adınız Soyadınız" data-tr="Adınız Soyadınız"
+                    data-en="Your Full Name" required class="form-input">
+                <input type="email" name="email" placeholder="E-Posta Adresiniz" data-tr="E-Posta Adresiniz"
+                    data-en="Your Email" required class="form-input">
+                <textarea name="message" placeholder="Mesajınız..." data-tr="Mesajınız..." data-en="Your Message..."
+                    required class="form-input" style="height: 150px; resize: none;"></textarea>
+                <button type="submit" class="btn" style="width: 100%;" data-tr="Mesaj Gönder"
+                    data-en="Send Message">Mesaj Gönder</button>
+            </form>
+        </div>
+        <div class="social-links"
+            style="margin-top: 50px; text-align: center; gap: 20px; display: flex; justify-content: center;">
+            <a href="https://github.com/AzizEmreYilmaz" target="_blank" class="footer-icon"
+                style="text-decoration: none;"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/KULLANICI_ADIN" target="_blank" class="footer-icon"
+                style="text-decoration: none;"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <p style="text-align: center; color: var(--text-dim); margin-top: 30px;">&copy; 2026 AzizEmre Yılmaz. <span
+                data-tr="Tüm hakları saklıdır." data-en="All rights reserved.">Tüm hakları saklıdır.</span></p>
+    </footer>
+
+    <!-- Senin Orijinal Proje Modalın (Bunu silmiştik, geri geldi!) -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <img id="modalImg" src="" alt="Proje Görseli">
+            <div style="padding: 30px;">
+                <h2 id="modalTitle" style="color: var(--accent);"></h2>
+                <p id="modalDesc" style="margin-top: 15px; color: var(--text-dim); line-height: 1.6;"></p>
+                <div class="modal-actions" style="margin-top: 25px; display: flex; gap: 15px;">
+                    <a href="#" id="modalLiveBtn" target="_blank" class="btn" data-tr="Canlı Demo"
+                        data-en="Live Demo">Canlı Demo</a>
+                    <a href="#" id="modalGithubBtn" target="_blank" class="btn secondary outline-btn">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SADECE EN ALTA EKLENEN YENİ AI CHATBOT ARAYÜZÜ -->
+    <div id="ai-chatbot-container">
+        <button id="chatbot-toggle-btn"><i class="fas fa-robot"></i></button>
+        <div id="chatbot-window" class="glass-panel hidden">
+            <div class="chatbot-header">
+                <div><i class="fas fa-robot" style="color: var(--accent); margin-right: 8px;"></i> AzizAI Asistan</div>
+                <i class="fas fa-times" id="chatbot-close" style="cursor: pointer;"></i>
+            </div>
+            <div class="chatbot-messages" id="chatbot-messages">
+                <div class="message bot-message">Merhaba! Ben Aziz Emre'nin yapay zeka asistanıyım. Neler yaptığım veya
+                    projelerim hakkında bana sorular sorabilirsiniz! (Örn: "Hangi dilleri biliyorsun?")</div>
+            </div>
+            <div class="chatbot-input-area">
+                <input type="text" id="chatbot-input" placeholder="Bir soru sorun...">
+                <button id="chatbot-send"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proje Konfigüratörü | AzizEmre</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="workshop.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body class="dark-mode workshop-page">
+
+    <div id="toast-container"></div>
+    <div id="cursor-dot"></div>
+    <div id="cursor-follower">
+        <div id="tool-icon"><i class="fas fa-tools"></i></div>
+    </div>
+
+    <nav class="navbar">
+        <div class="logo">Aziz<span>Konfigüratör</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Portfolyoya Dön</a></li>
+            <li><button id="theme-toggle" class="theme-btn"><i class="fas fa-moon"></i></button></li>
+        </ul>
+    </nav>
+
+    <main class="workshop-wrapper">
+        <header class="workshop-header">
+            <div class="urgency-badge"><i class="fas fa-fire"></i> Bu Ay İçin Son 2 Proje Slotu</div>
+            <h1 class="apple-style">Web Proje Konfigüratörü</h1>
+            <p>Tıpkı bir araç oluşturur gibi projenizi tasarlayın, akıllı sistemimiz size en uygun altyapıyı ve maliyeti
+                sunsun.</p>
+
+            <div class="config-progress-container">
+                <div id="config-progress" class="config-progress-fill"></div>
+            </div>
+            <p id="progress-text" style="font-size: 0.8rem; color: var(--accent); margin-top: 5px;">Konfigürasyon: %0
+            </p>
+        </header>
+
+        <!-- Formspree Entegrasyonu Eklenmiş Form -->
+        <form id="workshop-form" class="workshop-card" action="https://formspree.io/f/xkoynobk" method="POST">
+
+            <div class="packages-container">
+                <button type="button" class="package-btn" data-pkg="starter"><i class="fas fa-seedling"></i> Starter
+                    Paket</button>
+                <button type="button" class="package-btn" data-pkg="business"><i class="fas fa-briefcase"></i> Business
+                    Kurumsal</button>
+                <button type="button" class="package-btn" data-pkg="premium"><i class="fas fa-crown"></i> Premium
+                    E-Ticaret</button>
+            </div>
+
+            <div class="currency-selector" style="margin-top: 20px;">
+                <button type="button" class="currency-btn active" data-curr="TRY">₺ TL</button>
+                <button type="button" class="currency-btn" data-curr="USD">$ USD</button>
+                <button type="button" id="reset-btn" class="currency-btn"
+                    style="border-color: #ef4444; color: #ef4444;"><i class="fas fa-undo"></i> Temizle</button>
+            </div>
+
+            <div class="project-type-container">
+                <select id="project-type" name="Proje Türü" class="modern-select">
+                    <option value="" disabled selected>Web Sitesi Türünü Seçiniz...</option>
+                    <option value="Kurumsal">Kurumsal Web Sitesi</option>
+                    <option value="Blog">Blog / Haber Platformu</option>
+                    <option value="E-Ticaret">E-Ticaret Sitesi</option>
+                    <option value="Portfolyo">Kişisel Portfolyo</option>
+                    <option value="Landing">Landing Page (Tek Sayfa)</option>
+                    <option value="Özel Web App">Özel Web Uygulaması</option>
+                </select>
+            </div>
+
+            <div class="workshop-grid">
+                <div class="workshop-options">
+                    <h3 class="group-label">Bileşen Seçimi</h3>
+                    <div class="category-box">
+
+                        <div class="accordion-item active">
+                            <div class="accordion-header">Temel Altyapı <i class="fas fa-chevron-down"></i></div>
+                            <div class="accordion-content">
+                                <label class="check-item"
+                                    data-tooltip="Alan adınızın tescili ve 1 yıllık yönetimi."><input type="checkbox"
+                                        name="Hizmet_Domain" class="price-check" value="Seçildi"
+                                        data-name="Domain Yönetimi" data-price="800" data-time="1" data-cat="altyapi">
+                                    Domain Yönetimi <i class="fas fa-info-circle info-icon"></i></label>
+                                <label class="check-item"
+                                    data-tooltip="Yüksek hızlı, kesintisiz SSD bulut sunucu."><input type="checkbox"
+                                        name="Hizmet_Hosting" class="price-check" value="Seçildi"
+                                        data-name="Yüksek Performans Hosting" data-price="2500" data-time="1"
+                                        data-cat="altyapi"> Hosting (Yıllık) <i
+                                        class="fas fa-info-circle info-icon"></i></label>
+                                <label class="check-item" data-tooltip="Veri güvenliği için 256-bit şifreleme."><input
+                                        type="checkbox" name="Hizmet_SSL" class="price-check" value="Seçildi"
+                                        data-name="SSL Sertifikası" data-price="500" data-time="1" data-cat="altyapi">
+                                    SSL Sertifikası <i class="fas fa-info-circle info-icon"></i></label>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <div class="accordion-header">Tasarım & Deneyim <i class="fas fa-chevron-down"></i></div>
+                            <div class="accordion-content">
+                                <label class="check-item"
+                                    data-tooltip="Markanıza özel sıfırdan çizilmiş lüks arayüz."><input type="checkbox"
+                                        name="Hizmet_UI_UX" class="price-check" value="Seçildi"
+                                        data-name="Özel UI/UX Tasarım" data-price="8000" data-time="7"
+                                        data-cat="tasarim"> Özel UI/UX Tasarım <i
+                                        class="fas fa-info-circle info-icon"></i></label>
+                                <label class="check-item"
+                                    data-tooltip="Tüm cihazlarda (telefon, tablet, masaüstü) esnek ve kusursuz görünüm."><input
+                                        type="checkbox" name="Hizmet_Mobil_Responsive" class="price-check"
+                                        value="Seçildi" data-name="Responsive (Mobil) Tasarım" data-price="2000"
+                                        data-time="3" data-cat="tasarim"> Responsive Tasarım <i
+                                        class="fas fa-info-circle info-icon"></i></label>
+                                <label class="check-item"
+                                    data-tooltip="Kullanıcıyı sitede tutan modern mikro etkileşimler."><input
+                                        type="checkbox" name="Hizmet_Animasyon" class="price-check" value="Seçildi"
+                                        data-name="Özel Animasyonlar" data-price="4000" data-time="5"
+                                        data-cat="tasarim"> Üst Düzey Animasyonlar <i
+                                        class="fas fa-info-circle info-icon"></i></label>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <div class="accordion-header">Geliştirme & Yazılım <i class="fas fa-chevron-down"></i></div>
+                            <div class="accordion-content">
+                                <label class="check-item"
+                                    data-tooltip="İçeriklerinizi kod bilmeden yönetebileceğiniz dinamik panel."><input
+                                        type="checkbox" name="Hizmet_Admin_Panel" class="price-check" value="Seçildi"
+                                        data-name="Gelişmiş Admin Panel" data-price="9000" data-time="10"
+                                        data-cat="yazilim"> Admin Paneli (CMS) <i
+                                        class="fas fa-info-circle info-icon"></i></label>
+                                <label class="check-item"
+                                    data-tooltip="Dış servisler ile sisteminizin haberleşmesi."><input type="checkbox"
+                                        name="Hizmet_API" class="price-check" value="Seçildi"
+                                        data-name="API Entegrasyonu" data-price="6000" data-time="7" data-cat="yazilim">
+                                    API Entegrasyonu <i class="fas fa-info-circle info-icon"></i></label>
+                                <label class="check-item"
+                                    data-tooltip="Yüksek trafiği kaldırabilecek veritabanı kurulumu."><input
+                                        type="checkbox" name="Hizmet_Veritabani" class="price-check" value="Seçildi"
+                                        data-name="Veritabanı Kurulumu" data-price="4500" data-time="5"
+                                        data-cat="yazilim"> Veritabanı Mimarisi <i
+                                        class="fas fa-info-circle info-icon"></i></label>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <div class="accordion-header">Pazarlama & İleri Seviye <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="accordion-content">
+                                <label class="check-item"
+                                    data-tooltip="Google'da üst sıralara çıkmak için detaylı SEO çalışması."><input
+                                        type="checkbox" name="Hizmet_SEO" class="price-check" value="Seçildi"
+                                        data-name="İleri Seviye SEO" data-price="5000" data-time="7"
+                                        data-cat="pazarlama"> Kapsamlı SEO Optimizasyonu <i
+                                        class="fas fa-info-circle info-icon"></i></label>
+                                <label class="check-item"
+                                    data-tooltip="Sınırsız ürün, sepet ve müşteri yönetimi sunan online satış modülü."><input
+                                        type="checkbox" name="Hizmet_E_Ticaret" class="price-check" value="Seçildi"
+                                        data-name="E-Ticaret Modülü" data-price="15000" data-time="14"
+                                        data-cat="yazilim"> E-Ticaret Sistemi <i
+                                        class="fas fa-info-circle info-icon"></i></label>
+                                <label class="check-item"
+                                    data-tooltip="Kredi kartı ile güvenli online ödeme entegrasyonu."><input
+                                        type="checkbox" name="Hizmet_Sanal_POS" class="price-check" value="Seçildi"
+                                        data-name="Sanal POS / Ödeme" data-price="3500" data-time="4"
+                                        data-cat="yazilim"> Ödeme Sistemleri <i
+                                        class="fas fa-info-circle info-icon"></i></label>
+                                <label class="check-item"
+                                    data-tooltip="Çerez politikası ve yasal veri işleme standartlarına tam uyumluluk."><input
+                                        type="checkbox" name="Hizmet_KVKK" class="price-check" value="Seçildi"
+                                        data-name="KVKK Uyumlu Yapı" data-price="2000" data-time="2" data-cat="altyapi">
+                                    KVKK Uyumlu Altyapı <i class="fas fa-info-circle info-icon"></i></label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="workshop-details">
+                    <div id="smart-warnings" class="smart-warning-box"></div>
+
+                    <div id="proposal-content">
+                        <h3 class="group-label">Teklif Özeti</h3>
+                        <div id="selection-summary" class="summary-list">
+                            <p class="empty-msg">Sistemi yapılandırmaya başlayın.</p>
+                        </div>
+
+                        <div class="price-breakdown">
+                            <div class="breakdown-item"><span>Altyapı & Güvenlik:</span> <strong
+                                    id="bd-altyapi">0₺</strong></div>
+                            <div class="breakdown-item"><span>Tasarım UX/UI:</span> <strong id="bd-tasarim">0₺</strong>
+                            </div>
+                            <div class="breakdown-item"><span>Yazılım & Modüller:</span> <strong
+                                    id="bd-yazilim">0₺</strong></div>
+                            <div class="breakdown-item"><span>SEO & Pazarlama:</span> <strong
+                                    id="bd-pazarlama">0₺</strong></div>
+                        </div>
+
+                        <div class="analysis-box">
+                            <div class="analysis-item"><span>Tahmini Teslimat:</span> <strong id="time-display">0 İş
+                                    Günü</strong></div>
+                        </div>
+
+                        <div class="price-summary">
+                            <span class="price-label">Toplam Yatırım Bedeli:</span>
+                            <div class="price-tag"><span id="currency-symbol">₺</span><span id="total-amount">0</span>
+                            </div>
+                            <p style="font-size: 0.75rem; color: #4ade80; margin-top: 5px;"><i class="fas fa-bolt"></i>
+                                Fiyatlar anlık API kurları ile hesaplanır.</p>
+                        </div>
+                    </div>
+
+                    <textarea id="site-description" name="Proje Notları"
+                        placeholder="Projenizin AI Özeti / Notlarınız (Proje hedeflerinizi yazın...)"
+                        required></textarea>
+                </div>
+            </div>
+
+            <!-- GELİŞMİŞ CANLI WEB SİTESİ SİMÜLATÖRÜ -->
+            <div class="simulator-section"
+                style="margin-top: 50px; padding-top: 40px; border-top: 1px solid rgba(128,128,128,0.2);">
+                <h3 class="group-label"><i class="fas fa-magic"></i> Canlı Tasarım Simülatörü</h3>
+                <p style="color: var(--text-dim); margin-bottom: 25px;">Web sitenizin kurumsal renklerini, düzenini ve
+                    alan adını belirleyin; anında önizleyin.</p>
+
+                <div class="simulator-grid">
+                    <div class="simulator-controls">
+                        <div class="control-row-grid">
+                            <div class="control-group"><label>Marka (Ana) Rengi</label> <input type="color"
+                                    name="Sim_Ana_Renk" id="sim-primary-color" value="#6200ee"></div>
+                            <div class="control-group"><label>Arka Plan Rengi</label> <input type="color"
+                                    name="Sim_Arkaplan" id="sim-bg-color" value="#f4f4f9"></div>
+                            <div class="control-group"><label>Metin Rengi</label> <input type="color"
+                                    name="Sim_Metin_Renk" id="sim-text-color" value="#333333"></div>
+                        </div>
+
+                        <div class="control-group" style="margin-top: 15px;">
+                            <label>Site Düzeni (Menü & Logo)</label>
+                            <select id="sim-layout" name="Sim_Duzen" class="sim-custom-input">
+                                <option value="layout-default">Logo Solda, Menü Sağda</option>
+                                <option value="layout-center">Logo Ortada, Menü Altta</option>
+                                <option value="layout-reverse">Logo Sağda, Menü Solda</option>
+                            </select>
+                        </div>
+
+                        <div class="control-group" style="margin-top: 15px;">
+                            <label>Alan Adı (Domain) Ayarı</label>
+                            <div style="display: flex; gap: 10px;">
+                                <input type="text" id="sim-brand-name" name="Sim_Marka" class="sim-custom-input"
+                                    placeholder="Marka Adınız" style="flex: 2;">
+                                <select id="sim-domain-ext" name="Sim_Uzantı" class="sim-custom-input" style="flex: 1;">
+                                    <option value=".com">.com</option>
+                                    <option value=".com.tr">.com.tr</option>
+                                    <option value=".net">.net</option>
+                                    <option value=".org">.org</option>
+                                    <option value=".io">.io</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="control-group" style="margin-top: 20px;">
+                            <label>Logo Yükle (İsteğe Bağlı)</label>
+                            <label for="sim-logo-upload" class="custom-file-upload">
+                                <i class="fas fa-cloud-upload-alt"></i> <span id="file-name-text">Görsel Seçmek İçin
+                                    Tıklayın</span>
+                            </label>
+                            <input type="file" id="sim-logo-upload" accept="image/*" style="display: none;">
+                        </div>
+                    </div>
+
+                    <div class="simulator-mockup" id="virtual-website">
+                        <div class="mockup-browser-bar">
+                            <div style="display: flex; gap: 8px; align-items: center;">
+                                <span class="dot" style="background:#ff5f56;"></span>
+                                <span class="dot" style="background:#ffbd2e;"></span>
+                                <span class="dot" style="background:#27c93f;"></span>
+                            </div>
+                            <div class="mockup-url-bar"><i class="fas fa-lock"
+                                    style="font-size: 0.7rem; margin-right: 5px; opacity: 0.5;"></i> <span
+                                    id="mockup-url-text">markaniz.com</span></div>
+                            <div style="width: 42px;"></div>
+                        </div>
+                        <div class="mockup-content">
+                            <header class="mockup-header layout-default" id="mockup-header-box">
+                                <img id="mockup-logo" src="" alt="Logo" style="display: none; height: 35px;">
+                                <div id="mockup-logo-text" class="mockup-logo-text">Markanız</div>
+                                <nav class="mockup-nav"><span>Ana Sayfa</span> <span>Hizmetler</span>
+                                    <span>İletişim</span>
+                                </nav>
+                            </header>
+                            <section class="mockup-hero">
+                                <h1 class="mockup-title">Dijital Geleceğe Hoş Geldiniz</h1>
+                                <p class="mockup-desc">Modern, hızlı ve size özel tasarlanmış web deneyimini keşfedin.
+                                </p>
+                                <button type="button" class="mockup-btn">Hemen Keşfet</button>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-footer-actions">
+                <input type="text" id="contact-name" name="Müşteri Adı Soyadı" placeholder="Adınız Soyadınız" required>
+                <button type="submit" class="btn primary" id="form-submit-btn"><i class="fas fa-paper-plane"></i> Formu
+                    E-Mail İle Gönder</button>
+                <button type="button" id="whatsapp-btn" class="btn" style="background: #25D366; color: white;"><i
+                        class="fab fa-whatsapp"></i> WhatsApp'tan İlet</button>
+            </div>
+        </form>
+    </main>
+
+    <script src="script.js"></script>
+    <script src="workshop.js"></script>
+</body>
+
+</html>
